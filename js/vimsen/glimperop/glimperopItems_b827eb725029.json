@@ -2,6 +2,7 @@
 {
 	"item":
 	[
-		{"type":"NumberItem","name":"PV1_production_power","state":"0","link":""}
+		{"type":"NumberItem","name":"PV1_production_power","state":"0","link":""},
+		{"type":"SwitchItem","name":"FibaroPlug_2","state":"OFF","link":""}
 	]
 }

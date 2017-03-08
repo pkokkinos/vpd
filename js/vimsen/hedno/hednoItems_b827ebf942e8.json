@@ -1,0 +1,8 @@
+
+{
+	"item":
+	[
+		{"type":"BuildingItemSwitch","name":"FibaroPlug_1","state":"OFF","link":""},
+		{"type":"BuildingItemSwitch","name":"FibaroPlug_2","state":"OFF","link":""}
+	]
+}

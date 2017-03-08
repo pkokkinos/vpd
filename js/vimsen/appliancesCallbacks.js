@@ -243,16 +243,22 @@ $(document).ready(function() {
             ali.innerHTML = '<div  class="dash-widget-item consumptionApplianceItem"> <div class="consumptionHeader"> ' +
                 '<div class="dash-widget-header"> <div class="dash-widget-title"> ' + applianceName + ' <br/> <small>' + vgwname + '</small> </div>' +
                 ' <div class="pull-right m-t-15 m-r-5 m-b-15"> <div class="toggle-switch" data-ts-color="red"> ' +
-                '<input id="ts-' + applianceName + '" type="checkbox" hidden="hidden" class="switchON_OFF"> <label for="ts-' + applianceName + '" class="ts-helper"></label> </div> </div> </div>' +
+                '<input id="ts-' + macaddress + applianceName + '" type="checkbox" hidden="hidden" class="switchON_OFF"> <label for="ts-' + applianceName + '" class="ts-helper"></label> </div> </div> </div>' +
                 ' <div class="clearfix"></div> </div> <div class="bgm-teal p-20"> <div class="row"> ' +
                 '<div class="appliancesConsumptionDetails col-xs-6 m-t-30"> <small>' + element.prosumption + ' (W)</small> ' +
                 '<h3 id= "' + applianceName + '_power" class="m-0 f-400 c-white power_value">0</h3> <br/> <small>' + element.prosumption + ' (Wh)</small>' +
                 ' <h3 id= "' + applianceName + '_energy"class="m-0 f-400 c-white energy_value">0</h3> <br/>' +
-                ' <small>STATE</small> <h3 id= "' + applianceName + '_state" class="m-0 f-400 c-white state_value">' + element.state + '</h3> </div> <div class="col-xs-6"> ' +
+                ' <small>STATE</small> <h3 id= "'+macaddress + "_" + applianceName + '_state" class="m-0 f-400 c-white state_value">' + element.state + '</h3> </div> <div class="col-xs-6"> ' +
                 '<div class="p-t-20 p-b-20 text-center c-white"> <div class="easy-pie ' + applianceName + '" id= "' + applianceName + '_power_pie_percent" data-percent="0">' +
                 ' <div class="percent" id= "' + applianceName + '_power_percent">0</div> <div class="pie-title">' + element.prosumption + ' %</div> </div> ' +
                 '<div class="easy-pie ' + healthpie + '" data-bar-color="rgba(66,197,36,0.9)" data-percent="100"> ' +
                 '<div class="percent">100</div> <div class="pie-title">Health %</div> </div> </div> </div> </div> </div> </div>';
+
+            if (element.state === 'ON') {
+                $('#ts-' + + macaddress + applianceName  + '').prop('checked', true);
+            } else {
+                $('#ts-' + + macaddress + applianceName  + '').prop('checked', false);
+            }
 
             var measureContainer = document.createElement('div');
             measureContainer.id = index;
@@ -268,7 +274,7 @@ $(document).ready(function() {
             //console.log("checked:"+checked);
 
             $('#ts-' + applianceName + '').prop('checked', checked);
-
+            $('#ts-' + macaddress + applianceName + '').prop('checked', checked);
             //create Charts for measurements
             // createLiveChart("containerHighcharts", moment().subtract(100 * 1000, 'ms'), moment()));
 

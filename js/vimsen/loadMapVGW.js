@@ -21,11 +21,11 @@ $(document).ready(function() {
             // console.log( "second success Length"+JSON.stringify(data.item.length));
             $.each(data, function(index, element) {
 
-                if (element.group.indexOf("hedno") > -1) {
-                    var topic = element.name + '/' + element.mac + '/VGW/#';
-                } else {
+                //if (element.group.indexOf("hedno") > -1) {
+                //    var topic = element.name + '/' + element.mac + '/VGW/#';
+                //} else {
                     var topic = element.group + '/' + element.mac + '/VGW/#';
-                }
+                //}
                 topics.push(topic);
 
                 //insert map markers

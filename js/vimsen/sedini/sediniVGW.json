@@ -1,0 +1,6 @@
+{
+	"item":
+	[
+		{"type":"BuildingItemSwitch","name":"Actuation","state":"OFF","link":""}
+	]
+}

@@ -23,6 +23,7 @@
      } else if (window.location.pathname === '/vp-settings.html') {
          updateVGWSettings(message.destinationName, message.payloadString);
      } else {
+         //console.log(message.destinationName, message.payloadString)
          updateComponents(message.destinationName, message.payloadString);
      }
 

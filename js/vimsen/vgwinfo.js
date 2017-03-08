@@ -3,11 +3,11 @@ function addVGWInfoWidget(vgwObject) {
 
     //for highcharts
     var data = [];
-    if (vgwObject.group.indexOf("hedno") > -1) {
-        var path = vgwObject.name + '/' + vgwObject.mac + '/VGW';
-    } else {
+    //if (vgwObject.group.indexOf("hedno") > -1) {
+    //    var path = vgwObject.name + '/' + vgwObject.mac + '/VGW';
+    //} else {
         var path = vgwObject.group + '/' + vgwObject.mac + '/VGW';
-    }
+    //}
     var html = ''
 
     html += '<div class="col-sm-12 col-md-12 col-lg-12 c-white">';

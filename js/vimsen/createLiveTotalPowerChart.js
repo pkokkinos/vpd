@@ -7,7 +7,7 @@ function initTotalPowerLiveChart(divId) {
          },
          */
         title: {
-            text: 'Real Time Power (KW) for all VGWs'
+            text: 'Real Time Power (W) for all VGWs'
 
         },
         xAxis: {
@@ -20,7 +20,7 @@ function initTotalPowerLiveChart(divId) {
             minorTickInterval: 'auto',
             minorTickLength: 0,
             title: {
-                text: "KWatts"
+                text: "Watts"
             }
         },
         credits: {
@@ -98,7 +98,7 @@ function createLiveTotalPowerChart(divId, object, dateFrom, dateTo) {
     chart.tooltip.options.formatter = function() {
         var xyArr = [];
         //return  this.series.name + '</b> (VGW:<br/>' + this.series.options.vgw + ') value: ' + this.y+'(KW)' ;
-        return this.series.name + ' value: ' + this.y + '(KW)';
+        return this.series.name + ' value: ' + this.y + '(W)';
     }
 
     //change legend  labels

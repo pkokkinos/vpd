@@ -44,7 +44,7 @@ function hideDivs(controllerId) {
             text: 'Real Time Production (W) per Device for all VGWs'
         });
         chartTotalPower.setTitle({
-            text: 'Real Time Power (KW) for all VGWs'
+            text: 'Real Time Power (W) for all VGWs'
         });
 
     } else {
